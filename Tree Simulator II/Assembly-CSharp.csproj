@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\SklepSkrypt.cs" />
     <Compile Include="Assets\skrypty\generator.cs" />
     <Compile Include="Assets\skrypty\generatorDrzew.cs" />
     <Compile Include="Assets\skrypty\movement.cs" />

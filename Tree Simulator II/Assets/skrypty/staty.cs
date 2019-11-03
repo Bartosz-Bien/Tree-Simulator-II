@@ -18,13 +18,13 @@ public class staty : MonoBehaviour
 
         miesiaceGry = 60;
 
-        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy;
+        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy + ", Fertilizers: " + iloscNawozu + ", Month: " + miesiac % 12 + ", Year: " + miesiac / 12 + ", Remains: " + (miesiaceGry - miesiac) + " months";
     }
 
     // Update is called once per frame
     void Update()
     {
-        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy;
+        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy + ", Fertilizers: " + iloscNawozu + ", Month: " + miesiac % 12 + ", Year: " + miesiac / 12 + ", Remains: " + (miesiaceGry - miesiac) + " months";
     }
 
     
