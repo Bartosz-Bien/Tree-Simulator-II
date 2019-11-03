@@ -63,10 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\SklepSkrypt.cs" />
     <Compile Include="Assets\skrypty\generator.cs" />
     <Compile Include="Assets\skrypty\generatorDrzew.cs" />
     <Compile Include="Assets\skrypty\movement.cs" />
+    <Compile Include="Assets\skrypty\SklepSkrypt.cs" />
     <Compile Include="Assets\skrypty\staty.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
