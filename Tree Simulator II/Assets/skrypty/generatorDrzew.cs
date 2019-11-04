@@ -14,27 +14,37 @@ public class generatorDrzew : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject farmer = GameObject.Find("farmer-pixilart");
+        staty staty = farmer.GetComponent<staty>();
+        ilosc = (int)staty.iloscDrzew;
+
+        for (int i = 1; i < ilosc + 1; i++)
+        {
+            if (i % 2 == 1)
+                Instantiate(jesien, new Vector3(i * 2f, 0f, 0f), Quaternion.identity);
+            else
+                Instantiate(jesien, new Vector3(i * (-2f), 0f, 0f), Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject farmer = GameObject.Find("farmer-pixilart");
-        staty staty = farmer.GetComponent<staty>();
-        ilosc = (int)staty.iloscDrzew;
-
-        for (int i = 1; i < ilosc+1; i++)
-        {
-            if (i % 2 == 1)
-                Instantiate(jesien, new Vector3(i * 2f, 0f, 0f), Quaternion.identity);
-            else
-                Instantiate(jesien, new Vector3(i * (-2f), 0f, 0f), Quaternion.identity);            
-        }
+        
     }
 
     public void generujDrzewa()
     {
+        GameObject farmer = GameObject.Find("farmer-pixilart");
+        staty staty = farmer.GetComponent<staty>();
+        ilosc = (int)staty.iloscDrzew;
 
+        for (int i = 1; i < ilosc + 1; i++)
+        {
+            if (i % 2 == 1)
+                Instantiate(jesien, new Vector3(i * 2f, 0f, 0f), Quaternion.identity);
+            else
+                Instantiate(jesien, new Vector3(i * (-2f), 0f, 0f), Quaternion.identity);
+        }
     }
 }

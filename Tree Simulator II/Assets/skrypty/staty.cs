@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class staty : MonoBehaviour
 {
-    public int iloscDrzew, miesiac, miesiaceGry, iloscNawozu, iloscPieniedzy, cenaDrzewa, cenaNawozu;
+    public static int iloscDrzew;
+    public int miesiac, miesiaceGry, iloscNawozu, iloscPieniedzy, cenaDrzewa, cenaNawozu;
     public Text statsText;
 
     // Start is called before the first frame update

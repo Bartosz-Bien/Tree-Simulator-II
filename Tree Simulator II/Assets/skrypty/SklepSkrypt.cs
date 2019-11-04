@@ -6,11 +6,16 @@ public class SklepSkrypt : MonoBehaviour
 {
     public static bool czySklepOtwarty = false;
     public GameObject sklepUI;
+    
+    private void Start()
+    {
+        sklepUI.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        /*if(Input.GetKeyDown(KeyCode.Escape))
         {
             if (czySklepOtwarty)
             {
@@ -20,7 +25,7 @@ public class SklepSkrypt : MonoBehaviour
             {
                 otworzSklep();
             }
-        }
+        }*/
     }
 
     public void otworzSklep()
@@ -34,10 +39,16 @@ public class SklepSkrypt : MonoBehaviour
     {
         sklepUI.SetActive(false);
         czySklepOtwarty = false;
+
     }
 
     public void kupDrzewo()
     {
-        
+       
+    }
+
+    public void kupNawoz()
+    {
+
     }
 }
