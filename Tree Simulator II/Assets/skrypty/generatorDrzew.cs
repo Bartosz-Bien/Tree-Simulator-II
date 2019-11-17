@@ -2,49 +2,142 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class generatorDrzew : MonoBehaviour
+public class generatorDrzew : staty
 {
-    public GameObject wiosna;
-    public GameObject lato;
-    public GameObject jesien;
-    public GameObject zima;
-    public GameObject owoce;
-    public int ilosc;
-
-    // Start is called before the first frame update
+    // max ilosc drzew = 14
+    public List<GameObject> wiosna;
+    public List<GameObject> lato;
+    public List<GameObject> jesien;
+    public List<GameObject> zima;
+    public List<GameObject> owoce;
+    
     void Start()
     {
-        GameObject farmer = GameObject.Find("farmer-pixilart");
-        staty staty = farmer.GetComponent<staty>();
-        ilosc = (int)staty.iloscDrzew;
-
-        for (int i = 1; i < ilosc + 1; i++)
-        {
-            if (i % 2 == 1)
-                Instantiate(jesien, new Vector3(i * 2f, 0f, 0f), Quaternion.identity);
-            else
-                Instantiate(jesien, new Vector3(i * (-2f), 0f, 0f), Quaternion.identity);
-        }
+        Renderer zimaR = zima[0].GetComponent<Renderer>();
+        zimaR.enabled = true;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void generujDrzewa()
     {
-        GameObject farmer = GameObject.Find("farmer-pixilart");
-        staty staty = farmer.GetComponent<staty>();
-        ilosc = (int)staty.iloscDrzew;
+        GameObject rycerz = GameObject.Find("eventSkrypt");
+        eventy hpscript = rycerz.GetComponent<eventy>();
+        czyScieloDrzewo = hpscript.czyScieloDrzewo;
 
-        for (int i = 1; i < ilosc + 1; i++)
+        Debug.Log(czyScieloDrzewo);
+        if (miesiac % 12 == 10) // wypłata za plony
+            iloscPieniedzy += (1000 * iloscDrzew);
+
+        for (int i = 0; i < iloscDrzew; i++)
         {
-            if (i % 2 == 1)
-                Instantiate(jesien, new Vector3(i * 2f, 0f, 0f), Quaternion.identity);
-            else
-                Instantiate(jesien, new Vector3(i * (-2f), 0f, 0f), Quaternion.identity);
+            Renderer wiosnaR = wiosna[i].GetComponent<Renderer>();
+            wiosnaR.enabled = false;            
+        }
+        if (czyScieloDrzewo && miesiac % 12 >= 3 && miesiac % 12 <= 5)
+        {
+            Renderer wiosnaR = wiosna[iloscDrzew].GetComponent<Renderer>();
+            wiosnaR.enabled = false;
+            czyScieloDrzewo = false;
+            //iloscDrzew--;
+            Debug.Log(miesiac);
+        }
+        if (miesiac % 12 >= 3 && miesiac % 12 <= 5)
+        {            
+            for (int i = 0; i < iloscDrzew; i++)
+            {
+                Renderer wiosnaR = wiosna[i].GetComponent<Renderer>();
+                wiosnaR.enabled = true;
+            }            
+        }
+
+        for (int i = 0; i < iloscDrzew; i++)
+        {
+            Renderer latoR = lato[i].GetComponent<Renderer>();
+            latoR.enabled = false;
+        }
+        if (czyScieloDrzewo && miesiac % 12 >= 6 && miesiac % 12 <= 8)
+        {
+            Renderer latoR = lato[iloscDrzew].GetComponent<Renderer>();
+            latoR.enabled = false;
+            czyScieloDrzewo = false;
+            //iloscDrzew--;
+            Debug.Log(miesiac);
+        }
+        if (miesiac % 12 >= 6 && miesiac % 12 <= 8)
+        {
+            for (int i = 0; i < iloscDrzew; i++)
+            {
+                Renderer latoR = lato[i].GetComponent<Renderer>();
+                latoR.enabled = true;
+            }
+        }
+
+
+        for (int i = 0; i < iloscDrzew; i++)
+        {
+            Renderer owoceR = owoce[i].GetComponent<Renderer>();
+            owoceR.enabled = false;
+        }
+        if (czyScieloDrzewo && miesiac % 12 == 9)
+        {
+            Renderer owoceR = owoce[iloscDrzew].GetComponent<Renderer>();
+            owoceR.enabled = false;
+            czyScieloDrzewo = false;
+            //iloscDrzew--;
+            Debug.Log(miesiac);
+        }
+        if (miesiac % 12 == 9)
+        {
+            for (int i = 0; i < iloscDrzew; i++)
+            {
+                Renderer owoceR = owoce[i].GetComponent<Renderer>();
+                owoceR.enabled = true;
+            }
+            
+        }
+
+        for (int i = 0; i < iloscDrzew; i++)
+        {
+            Renderer jesienR = jesien[i].GetComponent<Renderer>();
+            jesienR.enabled = false;
+        }
+        if (czyScieloDrzewo && miesiac % 12 >= 10 && miesiac % 12 <= 11)
+        {
+            Renderer jesienR = jesien[iloscDrzew].GetComponent<Renderer>();
+            jesienR.enabled = false;
+            czyScieloDrzewo = false;
+            //iloscDrzew--;
+            Debug.Log(miesiac);
+        }
+        if (miesiac % 12 >= 10 && miesiac % 12 <= 11)
+        {
+            for (int i = 0; i < iloscDrzew; i++)
+            {
+                Renderer jesienR = jesien[i].GetComponent<Renderer>();
+                jesienR.enabled = true;
+
+            }
+        }
+                      
+        for (int i = 0; i < iloscDrzew; i++)
+        {
+            Renderer zimaR = zima[i].GetComponent<Renderer>();
+            zimaR.enabled = false;
+        }
+        if (czyScieloDrzewo && miesiac % 12 >= 0 && miesiac % 12 <= 2)
+        {
+            Renderer zimaR = zima[iloscDrzew].GetComponent<Renderer>();
+            zimaR.enabled = false;
+            czyScieloDrzewo = false;
+            //iloscDrzew--;
+            Debug.Log(miesiac);
+        }
+        if (miesiac % 12 >= 0 && miesiac % 12 <= 2)
+        {
+            for (int i = 0; i < iloscDrzew; i++)
+            {
+                Renderer zimaR = zima[i].GetComponent<Renderer>();
+                zimaR.enabled = true;
+            }
         }
     }
 }
