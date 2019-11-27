@@ -22,4 +22,9 @@ public class tytuloweMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void doTytulowego()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }

@@ -42,7 +42,7 @@ public class eventy : staty
     {
         czyEvent = Random.Range(1, 100);
         //Debug.Log(czyEvent);
-        if ((czyEvent < 25) && (miesiac > 10))
+        if ((czyEvent < 25) && (miesiac > 2))
         {
             eventPestycydy.SetActive(true);
         }

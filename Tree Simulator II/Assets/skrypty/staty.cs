@@ -18,7 +18,7 @@ public class staty : MonoBehaviour
         miesiac = 1;
         iloscNawozu = 0;
         iloscPestycydu = 0;
-        iloscPieniedzy = 80;
+        iloscPieniedzy = 520;
 
         miesiaceGry = 60;
     }

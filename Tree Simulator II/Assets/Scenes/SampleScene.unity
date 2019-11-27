@@ -472,8 +472,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1762972737}
-        m_MethodName: quitGame
+      - m_Target: {fileID: 1987404500}
+        m_MethodName: doTytulowego
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1565,6 +1565,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsText: {fileID: 1914425472}
   czyScieloDrzewo: 0
+  tekstMiesiaca:
+  - December
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
 --- !u!1 &265442831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1692,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsText: {fileID: 1914425472}
   czyScieloDrzewo: 0
+  tekstMiesiaca:
+  - December
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
   sklepUI: {fileID: 265442831}
   cenaDrzewaTekst: {fileID: 92100546}
   cenaNawozuTekst: {fileID: 1259176092}
@@ -4077,6 +4103,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsText: {fileID: 1914425472}
   czyScieloDrzewo: 0
+  tekstMiesiaca:
+  - December
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
   sklepUI: {fileID: 265442831}
   cenaDrzewaTekst: {fileID: 92100546}
   cenaNawozuTekst: {fileID: 92100546}
@@ -4508,8 +4547,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1762972737}
-        m_MethodName: quitGame
+      - m_Target: {fileID: 1987404500}
+        m_MethodName: doTytulowego
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7048,6 +7087,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsText: {fileID: 1914425472}
   czyScieloDrzewo: 0
+  tekstMiesiaca:
+  - December
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
   wiosna:
   - {fileID: 1812152803}
   - {fileID: 1662108373}
@@ -9801,6 +9853,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsText: {fileID: 1914425472}
   czyScieloDrzewo: 0
+  tekstMiesiaca:
+  - December
+  - January
+  - February
+  - March
+  - April
+  - May
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
   eventPestycydy: {fileID: 589259078}
   eventDrzewa: {fileID: 62169350}
   eventNawoz: {fileID: 995189598}
@@ -10934,6 +10999,49 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1779166042}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1987404499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1987404501}
+  - component: {fileID: 1987404500}
+  m_Layer: 0
+  m_Name: przelacznikNaMenuTytulowe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1987404500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987404499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6e4fd652099064c92e8c62ff7c863c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1987404501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987404499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 373.5, y: 210, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 84
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2003509813
 PrefabInstance:
   m_ObjectHideFlags: 0
