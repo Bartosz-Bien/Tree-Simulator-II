@@ -27,4 +27,14 @@ public class tytuloweMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void doWyjscia()
+    {
+        Application.Quit();
+    }
+
+    public void doPomocy()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 }
