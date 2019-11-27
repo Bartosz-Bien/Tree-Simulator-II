@@ -9,26 +9,24 @@ public class staty : MonoBehaviour
     public static int miesiac, miesiaceGry, iloscNawozu, iloscPieniedzy, cenaDrzewa, cenaNawozu, iloscPestycydu, cenaPestycydu;
     public Text statsText;
     public bool czyScieloDrzewo = false;
-
+    public string[] tekstMiesiaca = new string[] { "December", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November" };
+    
     // Start is called before the first frame update
     void Start()
     {
         iloscDrzew = 1;
-        miesiac = 0;
+        miesiac = 1;
         iloscNawozu = 0;
         iloscPestycydu = 0;
         iloscPieniedzy = 80;
 
         miesiaceGry = 60;
-        
-        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy + ", Fertilizers: " + iloscNawozu + ", Pesticides: " + iloscPestycydu + ", Month: " + miesiac % 12 + ", Year: " + miesiac / 12 + ", Remains: " + (miesiaceGry - miesiac) + " months";
     }
 
     // Update is called once per frame
     void Update()
     {
-        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy + ", Fertilizers: " + iloscNawozu + ", Pesticides: " + iloscPestycydu + ", Month: " + miesiac % 12 + ", Year: " + miesiac / 12 + ", Remains: " + (miesiaceGry - miesiac) + " months";
-        
+        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy + ", Fertilizers: " + iloscNawozu + ", Pesticides: " + iloscPestycydu + ", Month: " + tekstMiesiaca[(miesiac % 12)] + ", Year: " + miesiac / 12 + ", Remains: " + (miesiaceGry - miesiac) + " months";     
     }
 
     public void cennikDrzewa()
