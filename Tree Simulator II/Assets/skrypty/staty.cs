@@ -10,8 +10,8 @@ public class staty : MonoBehaviour
     public Text statsText;
     public bool czyScieloDrzewo = false;
     public string[] tekstMiesiaca = new string[] { "December", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November" };
-    
-    // Start is called before the first frame update
+    public static float freeDrzewo, freeNawoz, freePestycyd;
+
     void Start()
     {
         iloscDrzew = 1;
@@ -23,7 +23,6 @@ public class staty : MonoBehaviour
         miesiaceGry = 60;
     }
 
-    // Update is called once per frame
     void Update()
     {
         statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy + ", Fertilizers: " + iloscNawozu + ", Pesticides: " + iloscPestycydu + ", Month: " + tekstMiesiaca[(miesiac % 12)] + ", Year: " + miesiac / 12 + ", Remains: " + (miesiaceGry - miesiac) + " months";     
@@ -42,5 +41,20 @@ public class staty : MonoBehaviour
     public void cennikPestycydu()
     {
         cenaPestycydu = Random.Range(40, 60);
-    }        
+    }     
+    
+    public void prawdopodobienstwoDrzewa (float prawDrzewo)
+    {
+        freeDrzewo = prawDrzewo;
+    }
+
+    public void prawdopodobienstwoNawozu(float prawNawozu)
+    {
+        freeNawoz = prawNawozu;
+    }
+
+    public void prawdopodobienstwoPestycydu(float prawPestycydu)
+    {
+        freePestycyd = prawPestycydu;
+    }
 }

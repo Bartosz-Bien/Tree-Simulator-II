@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/pomoc.unity
     guid: 979b55d7c84fe664c8cd391bdc3782a9
+  - enabled: 1
+    path: Assets/Scenes/wyborRodzajuGry.unity
+    guid: b5173b367c489134a992a312dfc761fe
+  - enabled: 1
+    path: Assets/Scenes/freePlayGra.unity
+    guid: ffd0fc6bf71b503418e39e1dd7d0f076
+  - enabled: 1
+    path: Assets/Scenes/wyborSuwaki.unity
+    guid: b370182f9f837d84bb238e3234bbc46d
   m_configObjects: {}

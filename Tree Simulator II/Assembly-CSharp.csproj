@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
     <Compile Include="Assets\skrypty\eventy.cs" />
+    <Compile Include="Assets\skrypty\freePlayEventy.cs" />
     <Compile Include="Assets\skrypty\generator.cs" />
     <Compile Include="Assets\skrypty\generatorDrzew.cs" />
     <Compile Include="Assets\skrypty\movement.cs" />

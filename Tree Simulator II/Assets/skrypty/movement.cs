@@ -7,13 +7,11 @@ public class movement : MonoBehaviour
     float x, y;
     public float speed;
    
-    // Start is called before the first frame update
     void Start()
     {
         speed = 30f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         y = Input.GetAxis("Vertical") * 30 * speed * Time.fixedDeltaTime;

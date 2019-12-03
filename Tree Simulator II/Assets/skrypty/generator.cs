@@ -9,7 +9,6 @@ public class generator : MonoBehaviour
     public GameObject kraniec;
     public GameObject ziemia;
 
-    // Start is called before the first frame update
     void Start()
     {
         Instantiate(kraniec, new Vector3(width * 13f, 0f, 0f), Quaternion.identity);
@@ -25,10 +24,5 @@ public class generator : MonoBehaviour
 
         Instantiate(kraniec, new Vector3(width * (-13f), 0f, 0f), Quaternion.identity);
         Instantiate(ziemia, new Vector3(width * (-13f), -10f, 0f), Quaternion.identity);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

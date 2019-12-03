@@ -13,8 +13,7 @@ public class generatorDrzew : staty
     
     void Start()
     {
-        Renderer zimaR = zima[0].GetComponent<Renderer>();
-        zimaR.enabled = true;
+        zima[0].SetActive(true);
     }
     
     public void generujDrzewa()
@@ -29,114 +28,94 @@ public class generatorDrzew : staty
 
         for (int i = 0; i < iloscDrzew; i++)
         {
-            Renderer wiosnaR = wiosna[i].GetComponent<Renderer>();
-            wiosnaR.enabled = false;            
+            wiosna[i].SetActive(false);            
         }
         if (czyScieloDrzewo && miesiac % 12 >= 3 && miesiac % 12 <= 5)
         {
-            Renderer wiosnaR = wiosna[iloscDrzew].GetComponent<Renderer>();
-            wiosnaR.enabled = false;
+            wiosna[iloscDrzew].SetActive(false);
             czyScieloDrzewo = false;
-            //iloscDrzew--;
             Debug.Log(miesiac);
         }
         if (miesiac % 12 >= 3 && miesiac % 12 <= 5)
         {            
             for (int i = 0; i < iloscDrzew; i++)
             {
-                Renderer wiosnaR = wiosna[i].GetComponent<Renderer>();
-                wiosnaR.enabled = true;
+                wiosna[i].SetActive(true);
             }            
         }
 
         for (int i = 0; i < iloscDrzew; i++)
         {
-            Renderer latoR = lato[i].GetComponent<Renderer>();
-            latoR.enabled = false;
+            lato[i].SetActive(false);
         }
         if (czyScieloDrzewo && miesiac % 12 >= 6 && miesiac % 12 <= 8)
         {
-            Renderer latoR = lato[iloscDrzew].GetComponent<Renderer>();
-            latoR.enabled = false;
+            lato[iloscDrzew].SetActive(false);
             czyScieloDrzewo = false;
-            //iloscDrzew--;
             Debug.Log(miesiac);
         }
         if (miesiac % 12 >= 6 && miesiac % 12 <= 8)
         {
             for (int i = 0; i < iloscDrzew; i++)
             {
-                Renderer latoR = lato[i].GetComponent<Renderer>();
-                latoR.enabled = true;
+                lato[i].SetActive(true);
             }
         }
 
 
         for (int i = 0; i < iloscDrzew; i++)
         {
-            Renderer owoceR = owoce[i].GetComponent<Renderer>();
-            owoceR.enabled = false;
+            owoce[i].SetActive(false);
         }
         if (czyScieloDrzewo && miesiac % 12 == 9)
         {
-            Renderer owoceR = owoce[iloscDrzew].GetComponent<Renderer>();
-            owoceR.enabled = false;
+            owoce[iloscDrzew].SetActive(false);
             czyScieloDrzewo = false;
-            //iloscDrzew--;
             Debug.Log(miesiac);
         }
         if (miesiac % 12 == 9)
         {
             for (int i = 0; i < iloscDrzew; i++)
             {
-                Renderer owoceR = owoce[i].GetComponent<Renderer>();
-                owoceR.enabled = true;
+                owoce[i].SetActive(true);
             }
             
         }
 
         for (int i = 0; i < iloscDrzew; i++)
         {
-            Renderer jesienR = jesien[i].GetComponent<Renderer>();
-            jesienR.enabled = false;
+            jesien[i].SetActive(false);
         }
         if (czyScieloDrzewo && miesiac % 12 >= 10 && miesiac % 12 <= 11)
         {
-            Renderer jesienR = jesien[iloscDrzew].GetComponent<Renderer>();
-            jesienR.enabled = false;
+            jesien[iloscDrzew].SetActive(false);
             czyScieloDrzewo = false;
-            //iloscDrzew--;
             Debug.Log(miesiac);
         }
         if (miesiac % 12 >= 10 && miesiac % 12 <= 11)
         {
             for (int i = 0; i < iloscDrzew; i++)
             {
-                Renderer jesienR = jesien[i].GetComponent<Renderer>();
-                jesienR.enabled = true;
+                jesien[i].SetActive(true);
 
             }
         }
                       
         for (int i = 0; i < iloscDrzew; i++)
         {
-            Renderer zimaR = zima[i].GetComponent<Renderer>();
-            zimaR.enabled = false;
+            zima[i].SetActive(false);
         }
         if (czyScieloDrzewo && miesiac % 12 >= 0 && miesiac % 12 <= 2)
         {
-            Renderer zimaR = zima[iloscDrzew].GetComponent<Renderer>();
-            zimaR.enabled = false;
+            zima[iloscDrzew].SetActive(false);
             czyScieloDrzewo = false;
-            //iloscDrzew--;
             Debug.Log(miesiac);
         }
         if (miesiac % 12 >= 0 && miesiac % 12 <= 2)
         {
             for (int i = 0; i < iloscDrzew; i++)
             {
-                Renderer zimaR = zima[i].GetComponent<Renderer>();
-                zimaR.enabled = true;
+                zima[i].SetActive(true);
             }
         }
     }

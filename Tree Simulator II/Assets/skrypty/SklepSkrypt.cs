@@ -16,35 +16,13 @@ public class SklepSkrypt : staty
         sklepUI.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (czySklepOtwarty)
-            {
-                nastepnyMiesiac();
-            }
-            else
-            {
-                otworzSklep();
-            }
-        }*/
-    }
-
-    
-    
-                
     public void otworzSklep()
     {
         // sie wyswietla canvas jak wywolana funkcja        
         sklepUI.SetActive(true);
         czySklepOtwarty = true;
         cenaDrzewaTekst.text = "One tree costs: " + cenaDrzewa;
-        //Debug.Log(cenaNawozu);
-        cenaNawozuTekst.text = "One fertilizer costs: " + cenaNawozu;//"One fertilizer costs: " + cenaDrzewa;
-        //Debug.Log(cenaNawozu);
-        // Debug.Log(cenaPestycydu);
+        cenaNawozuTekst.text = "One fertilizer costs: " + cenaNawozu;
         cenaPestycyduTekst.text = "One pesticide costs: " + cenaPestycydu;
     }
 

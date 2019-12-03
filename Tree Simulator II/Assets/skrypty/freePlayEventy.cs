@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class eventy : staty
+public class freePlayEventy : staty
 {
     public GameObject eventPestycydy;
     public GameObject eventDrzewa;
@@ -17,8 +16,6 @@ public class eventy : staty
         eventPestycydy.SetActive(false);
         eventDrzewa.SetActive(false);
         eventNawoz.SetActive(false);
-        eventKoniec.SetActive(false);
-        eventWygrana.SetActive(false);
     }
 
     void Update()
@@ -35,19 +32,18 @@ public class eventy : staty
 
     public void eventFunction()
     {
-        czyEvent = Random.Range(1, 100);
-        
-        if ((czyEvent < 25) && (miesiac > 2))
+        czyEvent = Random.Range(1, 300);
+        if ((czyEvent < freePestycyd) && (miesiac > 2))
         {
             eventPestycydy.SetActive(true);
         }
 
-        if ((czyEvent >= 80) && (czyEvent < 86) && (miesiac > 36))        
+        if ((czyEvent < freeDrzewo + 100) && (miesiac > 36))
         {
             eventDrzewa.SetActive(true);
         }
 
-        if ((czyEvent >= 90) && (czyEvent < 100) && (miesiac > 21))
+        if ((czyEvent < freeNawoz + 200) && (miesiac > 21))
         {
             eventNawoz.SetActive(true);
         }
@@ -85,7 +81,7 @@ public class eventy : staty
     }
 
     public void NawozNie()
-    {        
+    {
         iloscDrzew--;
         eventNawoz.SetActive(false);
         czyScieloDrzewo = true;
