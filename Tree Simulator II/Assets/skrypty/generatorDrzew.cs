@@ -19,7 +19,7 @@ public class generatorDrzew : staty
     public void generujDrzewa()
     {
         GameObject rycerz = GameObject.Find("eventSkrypt");
-        eventy hpscript = rycerz.GetComponent<eventy>();
+        freePlayEventy hpscript = rycerz.GetComponent<freePlayEventy>();
         czyScieloDrzewo = hpscript.czyScieloDrzewo;
 
         Debug.Log(czyScieloDrzewo);

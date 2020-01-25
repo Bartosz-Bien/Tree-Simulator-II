@@ -36,6 +36,7 @@ public class eventy : staty
     public void eventFunction()
     {
         czyEvent = Random.Range(1, 100);
+        Debug.Log(czyEvent);
         
         if ((czyEvent < 25) && (miesiac > 2))
         {

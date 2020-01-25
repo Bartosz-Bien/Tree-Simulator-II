@@ -20,12 +20,12 @@ public class staty : MonoBehaviour
         iloscPestycydu = 0;
         iloscPieniedzy = 520;
 
-        miesiaceGry = 60;
+        miesiaceGry = 2000000000; //było 60 miesięcy, ale dam 2 000 000 000, czyli niemal maxa dla inta - nikt tak długo nie będzie grać
     }
 
     void Update()
     {
-        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy + ", Fertilizers: " + iloscNawozu + ", Pesticides: " + iloscPestycydu + ", Month: " + tekstMiesiaca[(miesiac % 12)] + ", Year: " + miesiac / 12 + ", Remains: " + (miesiaceGry - miesiac) + " months";     
+        statsText.text = "Trees: " + iloscDrzew + ", Coins: " + iloscPieniedzy + ", Fertilizers: " + iloscNawozu + ", Pesticides: " + iloscPestycydu + ", Month: " + tekstMiesiaca[(miesiac % 12)] + ", Year: " + miesiac / 12;// + ", Remains: " + (miesiaceGry - miesiac) + " months";     
     }
 
     public void cennikDrzewa()
